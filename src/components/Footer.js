@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 function Footer() {
+  const mode = useSelector((state) => state.mode);
 
-    return (
-        <div className="Footer" style={{'backgroundColor': 'white'}}>
-            <p>Footer Content</p>
-        </div>
-    )
+  return (
+    <div className="Footer" style={{'backgroundColor': mode.color3}}>
+        <p>Footer Content</p>
+    </div>
+)
 }
 
-export default Footer
+
+export default Footer;
